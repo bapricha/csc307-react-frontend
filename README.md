@@ -1,1 +1,3 @@
-# react-repo
+# This is the README file for Brayden's React Application
+#
+# Nothing to see here...
