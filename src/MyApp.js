@@ -14,9 +14,11 @@ function MyApp() {
     }
 
     function removeOneCharacter(index) {
-        const updated = characters.filter((character, i) => {
-            return i !== index
-        });
+        const updated = characters.filter(
+          (character, i) => { return i !== index });
+          const person = characters[index];
+          const id = person['id'];  
+        const response = axios.delete(`http://localhost:5000/users/${id}`);
         setCharacters(updated);
     }
     
@@ -49,10 +51,6 @@ function MyApp() {
           setCharacters(result);
      });
   }, [] );
-
-
-
-
 
     return (
       <div className="container">
